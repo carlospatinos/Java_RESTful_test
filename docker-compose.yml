@@ -9,8 +9,11 @@ services:
     links:
       - mongo_db
     restart: always
+    #args:
+    #  - ENV_USERS=Test
     environment:
       SPRING_DATA_MONGODB_URI: mongodb://mongo_db/users
+      ENV_USERS: Test
   mongo_db:
     image: "mongo"
     container_name: mongo_db

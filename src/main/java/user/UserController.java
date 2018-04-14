@@ -24,13 +24,13 @@ public class UserController extends WebSecurityConfigurerAdapter {
     private GeodeticCalculator geoCalc = new GeodeticCalculator();
     private Ellipsoid reference = Ellipsoid.WGS84;
 
-//    @Override
+    @Autowired
+    UserRepository userRepository;
+
+    //    @Override
 //    protected void configure (HttpSecurity http) throws Exception {
 //        http.csrf().disable();
 //    }
-
-    @Autowired
-    UserRepository userRepository;
 
     @RequestMapping(method = RequestMethod.GET, value="/jrt/api/v1.0/users")
     public ResponseEntity<Collection<User>> users() {

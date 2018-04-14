@@ -13,8 +13,6 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@Ignore
-// Test designed to verify operations against mongo. Will fail without mongo running and configuration updated.
 public class UserRepositoryTest {
 
     @Autowired
